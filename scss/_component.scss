@@ -1,0 +1,35 @@
+@use "variable" as *;
+@use "mixin" as *;
+@use "weather_themes" as *;
+
+@mixin Nav-Bar {
+  .nav-header {
+    width: 100%;
+    @include flex-row-center-center;
+    .nav-bar {
+      padding: 10px;
+      margin: 5px;
+      width: 90%;
+      background-color: $color-primary;
+      border-radius: $border-radius-md;
+      border: $border-width-thin solid $color-text-secondary;
+      .list {
+        @include flex-row-space-around-center;
+        list-style: none;
+        .logo {
+          height: $nav-list-h;
+          max-width: 100px;
+          // text-align: center;
+          img {
+            height: $img-h;
+            width: $img-w;
+            border-radius: 50%;
+            padding: 6px;
+          }
+        }
+        .name {
+        }
+      }
+    }
+  }
+}

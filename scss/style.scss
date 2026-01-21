@@ -1,0 +1,24 @@
+@use "variable" as *;
+@use "mixin" as *;
+@use "weather_themes" as *;
+@use "component" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    225deg,
+    #b3b8fa 0%,
+    // top-left
+    #acc5fa 35%,
+    // top-right
+    #b3b8fa 65%,
+    // bottom-right
+    #d0c6be 100% // bottom-left
+  );
+}
+
+@include Nav-Bar;

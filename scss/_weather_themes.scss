@@ -1,0 +1,10 @@
+$weather-themes: (
+  clear: linear-gradient(to bottom, #4facfe, #00f2fe),
+  clouds: linear-gradient(to bottom, #bdc3c7, #2c3e50),
+  rain: linear-gradient(to bottom, #314755, #26a0da),
+  drizzle: linear-gradient(to bottom, #3a7bd5, #3a6073),
+  thunderstorm: linear-gradient(to bottom, #141e30, #243b55),
+  snow: linear-gradient(to bottom, #e6dada, #274046),
+  mist: linear-gradient(to bottom, #606c88, #3f4c6b),
+  night: linear-gradient(to bottom, #0f2027, #203a43, #2c5364),
+);
