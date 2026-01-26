@@ -5,7 +5,7 @@
 @mixin Nav-Bar {
   .nav-header {
     width: 100%;
-    @include flex-row-center-center;
+    margin: 70px;
     .nav-bar {
       padding: 10px;
       margin: 5px;
@@ -28,6 +28,68 @@
           }
         }
         .name {
+          color: $color-text-tertiary;
+        }
+        .place {
+          .place_child {
+            @include flex-row-center-center;
+            gap: 5px;
+          }
+        }
+        .search {
+          // height: 45px;
+          // min-width: 450px;
+          // // background-color: ;
+          // border: $border-width-sm solid $color-text-primary;
+          // border-radius: $border-radius-md;
+          .input-container {
+            min-width: 400px;
+            position: relative;
+          }
+
+          .icon {
+            position: absolute;
+            right: 10px;
+            top: calc(50% + 5px);
+            transform: translateY(calc(-50% - 5px));
+            cursor: pointer;
+            border: none;
+            background-color: $color-primary;
+          }
+
+          .input {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            transition: 0.2s linear;
+            border: 2.5px solid black;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-color: $color-primary;
+            border-radius: $border-radius-md;
+          }
+
+          .input:focus {
+            outline: none;
+            border: 0.5px solid black;
+            box-shadow: -5px -5px 0px black;
+          }
+
+          .input-container:hover > .icon {
+            animation: anim 1s linear infinite;
+          }
+
+          @keyframes anim {
+            0%,
+            100% {
+              transform: translateY(calc(-50% - 5px)) scale(1);
+            }
+
+            50% {
+              transform: translateY(calc(-50% - 5px)) scale(1.1);
+            }
+          }
         }
       }
     }
