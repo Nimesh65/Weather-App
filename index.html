@@ -1,89 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="/scss/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/scss/style.css" />
+  </head>
 
-<body>
-    <header class="nav-header">
-        <nav class="nav-bar">
-            <ul class="list">
-                <li class="logo">
-                    <img src="/images/weather-app.png" alt="logo">
-                </li>
-                <li class="name">
-                    <h1>SkyCast</h1>
-                </li>
-                <li class="place">
-                    <div class="place_child">
-                        <span class="material-symbols-outlined">
-                            location_on
-                        </span>
-                        <p class="location">Imadol,Lalitpur</p>
-                    </div>
-                </li>
-                <li class="search">
-                    <form action="">
-                        <div class="input-container">
-                            <input type="text" name="text" class="input" placeholder="search...">
-                                <button class="icon" type="submit">
-                                    <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path
-                                                d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2"
-                                                stroke="#000" stroke-width="2.5" stroke-linecap="round"
-                                                stroke-linejoin="round"></path>
-                                            <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                </button>
-                        </div>
-                    </form>
-                </li>
-                <li class="notification">
-                    <span class="material-symbols-outlined">
-                        notifications
-                    </span>
-                </li>
-                <li class="setting">
-                    <span class="material-symbols-outlined">
-                        settings
-                    </span>
-                </li>
-                <li class="kpoli">
-                    <img src="" alt="">
-                </li>
-                <li class="myname">
-                    <h3>WoW Nimesh</h3>
-                </li>
-                <li class="downarrow">
-                    <span class="material-symbols-outlined">
-                        keyboard_arrow_down
-                    </span>
-                </li>
-            </ul>
-        </nav>
+  <body>
+    <header class="container-fluid nav-header">
+      <nav class="container nav-bar">
+        <ul class="list">
+          <li class="logo">
+            <img src="/images/weather-app.png" alt="logo" />
+          </li>
+          <li class="name">
+            <h1>SkyCast</h1>
+          </li>
+          <li class="place">
+            <div class="place_child">
+              <span class="material-symbols-outlined"> location_on </span>
+              <p class="location">Imadol,Lalitpur</p>
+            </div>
+          </li>
+          <li class="search">
+            <form action="">
+              <div class="input-container">
+                <input
+                  type="text"
+                  name="text"
+                  class="input"
+                  placeholder="search..."
+                />
+                <button class="icon" type="submit">
+                  <svg
+                    width="19px"
+                    height="19px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        opacity="1"
+                        d="M14 5H20"
+                        stroke="#000"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        opacity="1"
+                        d="M14 8H17"
+                        stroke="#000"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2"
+                        stroke="#000"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        opacity="1"
+                        d="M22 22L20 20"
+                        stroke="#000"
+                        stroke-width="3.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </li>
+          <li class="notification">
+            <span class="material-symbols-outlined"> notifications </span>
+          </li>
+          <li class="setting">
+            <span class="material-symbols-outlined"> settings </span>
+          </li>
+          <li class="kpoli">
+            <img src="" alt="" />
+          </li>
+          <li class="myname">
+            <h3>WoW Nimesh</h3>
+          </li>
+          <li class="downarrow">
+            <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="grid_container">
-        <div class="gridchild"></div>
-        <div class="gridchild"></div>
-        <div class="gridchild"></div>
-        <div class="gridchild"></div>
+    <section class="container grid_container">
+      <div class="gridchild1"></div>
+      <div class="gridchild2"></div>
+      <div class="gridchild3">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+        <div class="child4"></div>
+        <div class="child5"></div>
+        <div class="child6"></div>
+      </div>
+      <div class="gridchild4"></div>
     </section>
-</body>
-
+  </body>
 </html>

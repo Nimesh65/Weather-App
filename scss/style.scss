@@ -19,6 +19,8 @@ body {
     // bottom-right
     #d0c6be 100% // bottom-left
   );
+  // height: 100vh;
 }
 
 @include Nav-Bar;
+@include grid;

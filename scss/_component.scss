@@ -4,8 +4,8 @@
 
 @mixin Nav-Bar {
   .nav-header {
-    width: 100%;
-    margin: 70px;
+    margin: 79px 0;
+    @include center-x;
     .nav-bar {
       padding: 10px;
       margin: 5px;
@@ -13,7 +13,9 @@
       background-color: $color-primary;
       border-radius: $border-radius-md;
       border: $border-width-thin solid $color-text-secondary;
+      // @include center-x;
       .list {
+        margin: 0;
         @include flex-row-space-around-center;
         list-style: none;
         .logo {
@@ -96,5 +98,83 @@
   }
 }
 
+@mixin grid {
+  .grid_container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-rows: repeat(6, minmax(100px, 1fr));
+    gap: 14px;;
+  }
 
-@mixin 
+  .gridchild1 {
+    border-radius: 15px;
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    background-color: antiquewhite;
+  }
+
+  .gridchild2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 6 / span 6;
+    grid-column-start: 3;
+    background-color: antiquewhite;
+    border-radius: 15px;
+  }
+
+  .gridchild3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-row-start: 3;
+    // background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    border-radius: 15px;
+
+    .child1 {
+      border-radius: 15px;
+      background-color: azure;
+      // grid-row-start: 2;
+    }
+    .child2 {
+      // grid-row-start: 2;
+      border-radius: 15px;
+
+      background-color: azure;
+    }
+    .child3 {
+      // grid-row-start: 2;
+      border-radius: 15px;
+
+      background-color: azure;
+    }
+    .child4 {
+      grid-row-start: 2;
+      border-radius: 15px;
+
+      background-color: azure;
+    }
+
+    .child5 {
+      border-radius: 15px;
+
+      grid-row-start: 2;
+      background-color: azure;
+    }
+
+    .child6 {
+      border-radius: 15px;
+      grid-row-start: 2;
+      background-color: azure;
+    }
+  }
+
+  .gridchild4 {
+    grid-column: span 2 / span 2;
+    // grid-row-start: 5;
+    grid-row: span 2 / span 6;
+    background-color: antiquewhite;
+    border-radius: 15px;
+  }
+}
