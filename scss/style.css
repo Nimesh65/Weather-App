@@ -179,6 +179,13 @@ body {
   background-color: #d9e5fc;
   border-radius: 15px;
   border: 4px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.gridchild3 .child2 {
+  gap: 40px;
 }
 .gridchild3 .child4 {
   grid-row-start: 2;
@@ -203,33 +210,61 @@ body {
 }
 .gridchild4 .info1 {
   grid-column: span 3/span 3;
-  background-color: #d9e5fc;
-  border-radius: 15px;
-  border: 4px solid white;
+  display: flex;
+  align-items: end;
+}
+.gridchild4 .info1 span {
+  padding-left: 40px;
 }
 .gridchild4 .info2 {
+  grid-row: span 2/span 2;
   grid-row-start: 2;
-  background-color: #d9e5fc;
-  border-radius: 15px;
-  border: 4px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 .gridchild4 .info3 {
   grid-column: span 2/span 2;
+  grid-row: span 2/span 2;
   grid-row-start: 2;
-  background-color: #d9e5fc;
-  border-radius: 15px;
-  border: 4px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.gridchild4 .info4 {
-  grid-row-start: 3;
-  background-color: #d9e5fc;
-  border-radius: 15px;
-  border: 4px solid white;
+.gridchild4 .info3 .sun_info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 20%;
 }
-.gridchild4 .info5 {
-  grid-column: span 2/span 2;
-  grid-row-start: 3;
-  background-color: #d9e5fc;
-  border-radius: 15px;
-  border: 4px solid white;
+.gridchild4 .info3 .progress_bar .arc-bg {
+  fill: none;
+  stroke: #555;
+  stroke-width: 4;
+  stroke-dasharray: 4 6;
+}
+.gridchild4 .info3 .progress_bar .arc-fill {
+  fill: none;
+  stroke: yellow;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 0;
+}
+.gridchild4 .info3 .progress_bar .sun {
+  animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px #facc15) drop-shadow(0 0 8px #facc15);
+  }
+  50% {
+    filter: drop-shadow(0 0 8px #facc15) drop-shadow(0 0 16px rgba(250, 204, 21, 0.9));
+  }
+}
+
+.air_quality {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
