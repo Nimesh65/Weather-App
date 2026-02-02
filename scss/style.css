@@ -5,6 +5,7 @@
 
 body {
   background: linear-gradient(225deg, #b3b8fa 0%, #acc5fa 35%, #b3b8fa 65%, #d0c6be 100%);
+  height: 100vh;
 }
 
 .nav-header {
