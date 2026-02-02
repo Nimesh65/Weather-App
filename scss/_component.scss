@@ -45,7 +45,7 @@
           // border: $border-width-sm solid $color-text-primary;
           // border-radius: $border-radius-md;
           .input-container {
-            min-width: 400px;
+            min-width: 350px;
             position: relative;
           }
 
@@ -103,22 +103,81 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(100px, 1fr));
     grid-template-rows: repeat(6, minmax(100px, 1fr));
-    gap: 14px;;
+    gap: 20px;
   }
 
   .gridchild1 {
     border-radius: 15px;
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
-    background-color: antiquewhite;
+    background-color: $color-primary;
+    border-radius: $border-radius-md;
+    border: $border-width-thin solid $color-text-secondary;
   }
 
   .gridchild2 {
     grid-column: span 2 / span 2;
     grid-row: span 6 / span 6;
     grid-column-start: 3;
-    background-color: antiquewhite;
-    border-radius: 15px;
+    background-color: $color-primary;
+    border-radius: $border-radius-md;
+    border: $border-width-thin solid $color-text-secondary;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 30px;
+    .next1 {
+      grid-column: span 2 / span 2;
+      background-color: $color-primary;
+      border-radius: $border-radius-md;
+      border: $border-width-thin solid $color-text-secondary;
+    }
+
+    .next2 {
+      background-color: $color-primary;
+      border-radius: $border-radius-md;
+      border: $border-width-thin solid $color-text-secondary;
+      grid-row-start: 2;
+    }
+
+    .next3 {
+      background-color: $color-primary;
+      border-radius: $border-radius-md;
+      border: $border-width-thin solid $color-text-secondary;
+      grid-row-start: 2;
+    }
+    .next4 {
+      background-color: $color-primary;
+      border-radius: $border-radius-md;
+      border: $border-width-thin solid $color-text-secondary;
+    }
+    .next5 {
+      @extend .next4;
+      grid-row-start: 3;
+    }
+    .next6 {
+      @extend .next4;
+    }
+    .next7 {
+      @extend .next4;
+
+      grid-row-start: 4;
+    }
+    .next8 {
+      @extend .next4;
+    }
+    .next9 {
+      @extend .next4;
+
+      grid-row-start: 5;
+    }
+    .next10 {
+      @extend .next4;
+    }
+    .next11 {
+      @extend .next4;
+      grid-row-start: 6;
+    }
   }
 
   .gridchild3 {
@@ -129,52 +188,83 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 8px;
-    border-radius: 15px;
+    gap: 20px;
+    border-radius: $border-radius-md;
 
     .child1 {
-      border-radius: 15px;
-      background-color: azure;
+      background-color: $color-primary;
+      border-radius: $border-radius-md;
+      border: $border-width-thin solid $color-text-secondary;
       // grid-row-start: 2;
     }
     .child2 {
+      @extend .child1;
       // grid-row-start: 2;
-      border-radius: 15px;
-
-      background-color: azure;
     }
     .child3 {
-      // grid-row-start: 2;
-      border-radius: 15px;
-
-      background-color: azure;
+      @extend .child1;
     }
     .child4 {
       grid-row-start: 2;
-      border-radius: 15px;
-
-      background-color: azure;
+      @extend .child1;
     }
 
     .child5 {
-      border-radius: 15px;
-
       grid-row-start: 2;
-      background-color: azure;
+      @extend .child1;
     }
 
     .child6 {
-      border-radius: 15px;
       grid-row-start: 2;
-      background-color: azure;
+      @extend .child1;
     }
   }
 
   .gridchild4 {
     grid-column: span 2 / span 2;
-    // grid-row-start: 5;
     grid-row: span 2 / span 6;
-    background-color: antiquewhite;
-    border-radius: 15px;
+    background-color: $color-primary;
+    border-radius: $border-radius-md;
+    border: $border-width-thin solid $color-text-secondary;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    .info1 {
+      grid-column: span 3 / span 3;
+      background-color: $color-primary;
+      border-radius: $border-radius-md;
+      border: $border-width-thin solid $color-text-secondary;
+    }
+
+    .info2 {
+      grid-row-start: 2;
+      background-color: $color-primary;
+      border-radius: $border-radius-md;
+      border: $border-width-thin solid $color-text-secondary;
+    }
+
+    .info3 {
+      grid-column: span 2 / span 2;
+      grid-row-start: 2;
+      background-color: $color-primary;
+      border-radius: $border-radius-md;
+      border: $border-width-thin solid $color-text-secondary;
+    }
+
+    .info4 {
+      grid-row-start: 3;
+      background-color: $color-primary;
+      border-radius: $border-radius-md;
+      border: $border-width-thin solid $color-text-secondary;
+    }
+
+    .info5 {
+      grid-column: span 2 / span 2;
+      grid-row-start: 3;
+      background-color: $color-primary;
+      border-radius: $border-radius-md;
+      border: $border-width-thin solid $color-text-secondary;
+    }
   }
 }
