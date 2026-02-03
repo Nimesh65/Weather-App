@@ -113,6 +113,40 @@
     background-color: $color-primary;
     border-radius: $border-radius-md;
     border: $border-width-thin solid $color-text-secondary;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    place-items: center;
+    .weather_info1 {
+      width: 90%;
+      @include flex-row-space-between-center;
+      .current_time {
+        display: flex;
+        flex-direction: column;
+      }
+      .forenheight {
+        display: flex;
+      }
+    }
+    .weather_info2 {
+      width: 90%;
+      @include flex-row-start-center;
+      gap: 40px;
+      .degree {
+        font-size: 50px;
+        font-weight: 700;
+      }
+      .feel {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .weather_info3 {
+      width: 90%;
+      @include flex-row-start-center;
+      // justify-self: flex-start;
+    }
   }
 
   .gridchild2 {
@@ -128,55 +162,123 @@
     row-gap: 30px;
     .next1 {
       grid-column: span 2 / span 2;
-      background-color: $color-primary;
-      border-radius: $border-radius-md;
-      border: $border-width-thin solid $color-text-secondary;
+      // background-color: $color-primary;
+      // border-radius: $border-radius-md;
+      // border: $border-width-thin solid $color-text-secondary;
+      @include flex-row-space-between-center;
+      .future {
+        font-size: 20px;
+        font-weight: 400;
+        padding-left: 30px;
+        display: flex;
+        gap: 30px;
+        .future_weather {
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+        }
+        .line {
+          height: 3px;
+          width: 100%;
+          background-color: black;
+          border-radius: 10px;
+          display: none;
+        }
+        .line.active {
+          display: block;
+        }
+        // .line2.active {
+        //   display: block;
+        // }
+        // .line3.active {
+        //   display: block;
+        // }
+      }
+      .btn {
+        .button {
+          height: 50px;
+          width: 200px;
+          color: white;
+          background-color: #222;
+          font-weight: 500;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          line-height: 2rem;
+          cursor: pointer;
+          text-align: center;
+          border: none;
+        }
+
+        .button:hover {
+          background-color: #333;
+        }
+      }
     }
 
     .next2 {
-      background-color: $color-primary;
-      border-radius: $border-radius-md;
-      border: $border-width-thin solid $color-text-secondary;
+      // background-color: $color-primary;
+      // border-radius: $border-radius-md;
+      border-right: $border-width-sm solid gray;
       grid-row-start: 2;
     }
 
     .next3 {
-      background-color: $color-primary;
-      border-radius: $border-radius-md;
-      border: $border-width-thin solid $color-text-secondary;
+      // background-color: $color-primary;
+      // border-radius: $border-radius-md;
+      // border: $border-width-thin solid $color-text-secondary;
+      border-left: $border-width-sm solid gray;
       grid-row-start: 2;
     }
     .next4 {
-      background-color: $color-primary;
-      border-radius: $border-radius-md;
-      border: $border-width-thin solid $color-text-secondary;
+      // background-color: $color-primary;
+      // border-radius: $border-radius-md;
+      // border: $border-width-thin solid $color-text-secondary;
+      border-left: $border-width-sm solid gray;
     }
     .next5 {
-      @extend .next4;
+      // @extend .next4;
       grid-row-start: 3;
+      border-right: $border-width-sm solid gray;
     }
     .next6 {
-      @extend .next4;
+      // @extend .next4;
+      border-left: $border-width-sm solid gray;
     }
     .next7 {
-      @extend .next4;
-
+      // @extend .next4;
+      border-right: $border-width-sm solid gray;
       grid-row-start: 4;
     }
     .next8 {
-      @extend .next4;
+      border-left: $border-width-sm solid gray;
+      // @extend .next4;
     }
     .next9 {
-      @extend .next4;
-
+      // @extend .next4;
+      border-right: $border-width-sm solid gray;
       grid-row-start: 5;
     }
     .next10 {
-      @extend .next4;
+      border-left: $border-width-sm solid gray;
+      // @extend .next4;
     }
     .next11 {
-      @extend .next4;
+      border-right: $border-width-sm solid gray;
+      // @extend .next4;
       grid-row-start: 6;
+    }
+    .next_hour {
+      @include center-xy;
+      gap: 30px;
+      .next_weather {
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+      }
+      .temperature {
+        font-size: 40px;
+        font-weight: 500;
+      }
     }
   }
 

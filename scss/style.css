@@ -115,6 +115,48 @@ body {
   background-color: #d9e5fc;
   border-radius: 15px;
   border: 4px solid white;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+  place-items: center;
+}
+.gridchild1 .weather_info1 {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.gridchild1 .weather_info1 .current_time {
+  display: flex;
+  flex-direction: column;
+}
+.gridchild1 .weather_info1 .forenheight {
+  display: flex;
+}
+.gridchild1 .weather_info2 {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+}
+.gridchild1 .weather_info2 .degree {
+  font-size: 50px;
+  font-weight: 700;
+}
+.gridchild1 .weather_info2 .feel {
+  display: flex;
+  flex-direction: column;
+}
+.gridchild1 .weather_info3 {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .gridchild2 {
@@ -131,38 +173,99 @@ body {
 }
 .gridchild2 .next1 {
   grid-column: span 2/span 2;
-  background-color: #d9e5fc;
-  border-radius: 15px;
-  border: 4px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.gridchild2 .next1 .future {
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 30px;
+  display: flex;
+  gap: 30px;
+}
+.gridchild2 .next1 .future .future_weather {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.gridchild2 .next1 .future .line {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+  display: none;
+}
+.gridchild2 .next1 .future .line.active {
+  display: block;
+}
+.gridchild2 .next1 .btn .button {
+  height: 50px;
+  width: 200px;
+  color: white;
+  background-color: #222;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+}
+.gridchild2 .next1 .btn .button:hover {
+  background-color: #333;
 }
 .gridchild2 .next2 {
-  background-color: #d9e5fc;
-  border-radius: 15px;
-  border: 4px solid white;
+  border-right: 2px solid gray;
   grid-row-start: 2;
 }
 .gridchild2 .next3 {
-  background-color: #d9e5fc;
-  border-radius: 15px;
-  border: 4px solid white;
+  border-left: 2px solid gray;
   grid-row-start: 2;
 }
-.gridchild2 .next4, .gridchild2 .next11, .gridchild2 .next10, .gridchild2 .next9, .gridchild2 .next8, .gridchild2 .next7, .gridchild2 .next6, .gridchild2 .next5 {
-  background-color: #d9e5fc;
-  border-radius: 15px;
-  border: 4px solid white;
+.gridchild2 .next4 {
+  border-left: 2px solid gray;
 }
 .gridchild2 .next5 {
   grid-row-start: 3;
+  border-right: 2px solid gray;
+}
+.gridchild2 .next6 {
+  border-left: 2px solid gray;
 }
 .gridchild2 .next7 {
+  border-right: 2px solid gray;
   grid-row-start: 4;
 }
+.gridchild2 .next8 {
+  border-left: 2px solid gray;
+}
 .gridchild2 .next9 {
+  border-right: 2px solid gray;
   grid-row-start: 5;
 }
+.gridchild2 .next10 {
+  border-left: 2px solid gray;
+}
 .gridchild2 .next11 {
+  border-right: 2px solid gray;
   grid-row-start: 6;
+}
+.gridchild2 .next_hour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.gridchild2 .next_hour .next_weather {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.gridchild2 .next_hour .temperature {
+  font-size: 40px;
+  font-weight: 500;
 }
 
 .gridchild3 {
