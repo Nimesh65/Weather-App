@@ -195,10 +195,13 @@
       background-color: $color-primary;
       border-radius: $border-radius-md;
       border: $border-width-thin solid $color-text-secondary;
+      @include center-xy;
+      gap: 15px;
       // grid-row-start: 2;
     }
     .child2 {
       @extend .child1;
+      gap: 40px;
       // grid-row-start: 2;
     }
     .child3 {
@@ -232,39 +235,75 @@
     gap: 8px;
     .info1 {
       grid-column: span 3 / span 3;
-      background-color: $color-primary;
-      border-radius: $border-radius-md;
-      border: $border-width-thin solid $color-text-secondary;
+      // background-color: $color-primary;
+      // border-radius: $border-radius-md;
+      // border: $border-width-thin solid $color-text-secondary;
+      display: flex;
+      align-items: end;
+      span {
+        padding-left: 40px;
+      }
     }
 
     .info2 {
+      grid-row: span 2 / span 2;
       grid-row-start: 2;
-      background-color: $color-primary;
-      border-radius: $border-radius-md;
-      border: $border-width-thin solid $color-text-secondary;
+      // background-color: $color-primary;
+      // border-radius: $border-radius-md;
+      // border: $border-width-thin solid $color-text-secondary;
+      @include center-xy;
+      gap: 15px;
     }
 
     .info3 {
       grid-column: span 2 / span 2;
+      grid-row: span 2 / span 2;
       grid-row-start: 2;
-      background-color: $color-primary;
-      border-radius: $border-radius-md;
-      border: $border-width-thin solid $color-text-secondary;
-    }
+      // background-color: $color-primary;
+      // border-radius: $border-radius-md;
+      // border: $border-width-thin solid $color-text-secondary;
+      @include flex-row-space-between-center;
+      .sun_info {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        width: 20%;
+      }
+      .progress_bar {
+        .arc-bg {
+          fill: none;
+          stroke: #555;
+          stroke-width: 4;
+          stroke-dasharray: 4 6;
+        }
 
-    .info4 {
-      grid-row-start: 3;
-      background-color: $color-primary;
-      border-radius: $border-radius-md;
-      border: $border-width-thin solid $color-text-secondary;
-    }
+        .arc-fill {
+          fill: none;
+          stroke: yellow;
+          stroke-width: 4;
+          stroke-linecap: round;
+          stroke-dasharray: 0;
+        }
 
-    .info5 {
-      grid-column: span 2 / span 2;
-      grid-row-start: 3;
-      background-color: $color-primary;
-      border-radius: $border-radius-md;
-      border: $border-width-thin solid $color-text-secondary;
+        .sun {
+          animation: glow 2.5s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+          0%,
+          100% {
+            filter: drop-shadow(0 0 4px #facc15) drop-shadow(0 0 8px #facc15);
+          }
+          50% {
+            filter: drop-shadow(0 0 8px #facc15)
+              drop-shadow(0 0 16px rgba(250, 204, 21, 0.9));
+          }
+        }
+      }
     }
+  }
+  .air_quality {
+    display: flex;
+    flex-direction: column;
   }
 }

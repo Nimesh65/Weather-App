@@ -125,23 +125,128 @@
         <div class="next9"></div>
         <div class="next10"></div>
         <div class="next11"></div>
-
       </div>
       <div class="gridchild3">
-        <div class="child1"></div>
-        <div class="child2"></div>
-        <div class="child3"></div>
-        <div class="child4"></div>
-        <div class="child5"></div>
-        <div class="child6"></div>
+        <div class="child1">
+          <div class="sun_image">
+            <img src="/images/sun.png" alt="sun" height="50px" width="50px" />
+          </div>
+          <div class="air_quality">
+            <span>Air quality</span>
+            <span><strong>156</strong></span>
+          </div>
+        </div>
+        <div class="child2">
+          <div class="sun_image">
+            <img src="/images/wind.png" alt="sun" height="50px" width="50px" />
+          </div>
+          <div class="air_quality">
+            <span>Wind</span>
+            <span><strong>156</strong></span>
+          </div>
+        </div>
+        <div class="child3">
+          <div class="sun_image">
+            <img src="/images/humidity.png" alt="sun" height="50px" width="50px" />
+          </div>
+          <div class="air_quality">
+            <span>Humidity</span>
+            <span><strong>156</strong></span>
+          </div>
+        </div>
+        <div class="child4">
+          <div class="sun_image">
+            <img src="/images/view.png" alt="sun" height="50px" width="50px" />
+          </div>
+          <div class="air_quality">
+            <span>Visibility</span>
+            <span><strong>156</strong></span>
+          </div>
+        </div>
+        <div class="child5">
+          <div class="sun_image">
+            <img src="/images/pressure-gauge.png" alt="sun" height="50px" width="50px" />
+          </div>
+          <div class="air_quality">
+            <span>Pressure</span>
+            <span><strong>156</strong></span>
+          </div>
+        </div>
+        <div class="child6">
+          <div class="sun_image">
+            <img src="/images/low-temperature.png" alt="sun" height="50px" width="50px" />
+          </div>
+          <div class="air_quality">
+            <span>Temperature</span>
+            <span><strong>156</strong></span>
+          </div>
+        </div>
       </div>
       <div class="gridchild4">
-        <div class="info1">Sun & Moon Summary</div>
-        <div class="info2"></div>
-        <div class="info3"></div>
-        <div class="info4"></div>
-        <div class="info5"></div>
+        <div class="info1">
+          <span> Sun & Moon Summary </span>
+        </div>
+        <div class="info2">
+          <div class="sun_image">
+            <img src="/images/sun.png" alt="sun" height="50px" width="50px" />
+          </div>
+          <div class="air_quality">
+            <span>Air quality</span>
+            <span><strong>156</strong></span>
+          </div>
+        </div>
+        <div class="info3">
+          <div class="sun_info">
+            <img
+              src="/images/sunrise.png"
+              alt="sunrise"
+              height="50px"
+              width="50px"
+            />
+            <span>Sunrise</span>
+            <span><strong>5:43AM</strong></span>
+          </div>
+          <div class="progress_bar">
+            <svg viewBox="0 0 200 100" width="260">
+              <!-- Dotted background arc -->
+              <path
+                id="arcBg"
+                d="M 30 80 A 60 50 0 0 1 180 80"
+                fill="none"
+                stroke="#facc15"
+                stroke-width="4"
+                stroke-dasharray="2 6"
+                opacity="0.6"
+              />
+
+              <path
+                id="arcFill"
+                d="M 30 80 A 60 50 0 0 1 180 80"
+                fill="none"
+                stroke="#facc15"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+
+              <!-- Sun -->
+              <circle id="sun" r="5" fill="#facc15" class="sun" />
+            </svg>
+          </div>
+          <div class="sun_info">
+            <img
+              src="/images/sunset.png"
+              alt="sunrise"
+              height="50px"
+              width="50px"
+            />
+            <span>Sunset</span>
+            <span><strong>5:43PM</strong></span>
+          </div>
+        </div>
+        <!-- <div class="info4"></div>
+        <div class="info5"></div> -->
       </div>
     </section>
+    <script src="/js/script.js"></script>
   </body>
 </html>
